@@ -3,7 +3,7 @@ import Layout from '@components/layout/layout.jsx'
 import Home from './pages/home/home.jsx'
 import Property from './pages/Property/Property.jsx'
 import About from './pages/About/About.jsx'
-import NotFound from './notFound/NotFound.jsx'
+import NotFound from './notFound/notFound.jsx'
 
 function App() {
     return (

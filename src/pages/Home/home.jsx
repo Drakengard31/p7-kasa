@@ -5,7 +5,7 @@ import './home.css'; // Styles CSS spécifiques
 import homeBanner from '@assets/Mask Group.png'; // Image de la bannière
 import propertiesData from '../../data/properties.json'; // Données des propriétés
 
-// 2. Définition du composant home
+// 2. Définition du composant Home
 function Home() {
     // 3. États du composant
     const [properties, setProperties] = useState([]); // Stocke les propriétés

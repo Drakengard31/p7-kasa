@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'; // Hooks React
 import Banner from '../../components/Banner/Banner'; // Correction du chemin d'import
 import Card from '@components/Card/Card.jsx'; // Composant carte de propriété
-import './home.css'; // Styles CSS spécifiques
+import './Home.css'; // Styles CSS spécifiques
 import homeBanner from '@assets/Mask Group.png'; // Image de la bannière
 import propertiesData from '../../data/properties.json'; // Données des propriétés
 

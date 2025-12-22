@@ -1,5 +1,5 @@
 import { Routes, Route } from 'react-router-dom'
-import Layout from '@components/layout/layout.jsx'
+import Layout from '@components/layout/Layout.jsx'
 import Home from './pages/home/Home.jsx'
 import Property from './pages/Property/Property.jsx'
 import About from './pages/About/About.jsx'

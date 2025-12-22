@@ -1,4 +1,4 @@
-import './Footer.css'
+import './footer.css'
 import logoWhite from '@images/D_Footer.png'
 
 function Footer() {

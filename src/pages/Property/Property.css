@@ -1,0 +1,442 @@
+/* Styles pour la liste des propriétés */
+.properties {
+    width: 100%;
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.properties-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+    margin-top: 30px;
+}
+
+/* Styles pour les cartes de propriétés */
+.property-card {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    color: inherit;
+    text-decoration: none;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.property-card:hover {
+    transform: translateY(-5px);
+}
+
+.property-card-image {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.property-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.property-card-content {
+    padding: 15px;
+    position: relative;
+}
+
+.property-card-title {
+    font-size: 18px;
+    margin: 0 0 5px 0;
+    color: #FF6060;
+    font-weight: 500;
+}
+
+.property-card-location {
+    font-size: 14px;
+    margin: 0 0 10px 0;
+    color: #333;
+}
+
+.property-card-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.property-card-rating {
+    display: flex;
+    margin-top: 10px;
+}
+
+.property-card-host {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+
+/* Styles pour les détails d'une propriété */
+.property-details {
+    width: 100%;
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Ajustements pour la mise en page de l'en-tête de propriété */
+.property-header {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.property-title {
+    color: #FF6060;
+    font-size: 36px;
+    margin: 0 0 10px 0;
+}
+
+.property-location {
+    color: #000;
+    font-size: 18px;
+    margin: 0 0 15px 0;
+}
+
+/* Styles pour les tags */
+.property-tags, .property-card-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.property-tag {
+    background-color: #FF6060;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 15px;
+    font-size: 14px;
+    display: inline-block;
+}
+
+/* Styles pour l'hôte */
+.property-host, .property-card-host {
+    display: flex;
+    align-items: center;
+}
+
+/* Styles pour l'affichage de l'hôte et de la notation */
+.property-host-rating {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.property-host {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    position: static; /* Enlève le positionnement absolute du style original */
+}
+
+.host-name {
+    margin-right: 10px;
+    font-size: 16px;
+    text-align: right;
+    color: #FF6060;
+}
+
+.host-picture, .default-avatar {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: #C4C4C4;
+}
+
+.property-card-host .host-picture,
+.property-card-host .default-avatar {
+    width: 32px;
+    height: 32px;
+}
+
+.property-card-host .host-name {
+    font-size: 14px;
+}
+
+.host-picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Styles pour la notation par étoiles */
+.property-rating, .property-card-rating {
+    display: flex;
+}
+
+.property-rating {
+    margin-top: 5px;
+}
+
+.star {
+    font-size: 24px;
+    margin-right: 5px;
+}
+
+.property-card-rating .star {
+    font-size: 18px;
+    margin-right: 2px;
+}
+
+.star.filled {
+    color: #FF6060;
+}
+
+.star.empty {
+    color: #E3E3E3;
+}
+
+.property-cover {
+    width: 100%;
+    height: 415px;
+    border-radius: 25px;
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+
+.property-cover img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.property-collapses {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.loader {
+    text-align: center;
+    padding: 50px;
+    font-size: 18px;
+}
+
+.error {
+    color: #FF6060;
+    text-align: center;
+    padding: 50px;
+    font-size: 18px;
+}
+
+@media (max-width: 768px) {
+    .properties {
+        padding: 0 15px;
+    }
+
+    .properties-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+
+    .property-details {
+        padding: 0 15px;
+    }
+
+    .property-title {
+        font-size: 24px;
+        margin: 0 0 5px 0;
+    }
+
+    .property-location {
+        font-size: 14px;
+        margin: 0 0 10px 0;
+    }
+
+    .property-tags, .property-card-tags {
+        gap: 8px;
+        margin-bottom: 15px;
+    }
+
+    .property-tag {
+        padding: 3px 10px;
+        font-size: 12px;
+    }
+
+    .property-host-rating {
+        position: static;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-top: 15px;
+    }
+
+    .property-host {
+        margin-bottom: 0;
+    }
+
+    .host-name {
+        font-size: 14px;
+    }
+
+    .host-picture, .default-avatar {
+        width: 48px;
+        height: 48px;
+    }
+
+    .property-card-host .host-picture,
+    .property-card-host .default-avatar {
+        width: 24px;
+        height: 24px;
+    }
+
+    .property-card-host .host-name {
+        font-size: 12px;
+    }
+
+    .star {
+        font-size: 18px;
+    }
+
+    .property-card-rating .star {
+        font-size: 14px;
+    }
+
+    .property-card-image {
+        height: 180px;
+    }
+
+    .property-card-title {
+        font-size: 16px;
+    }
+
+    .property-card-location {
+        font-size: 12px;
+    }
+
+    .property-cover {
+        height: 255px;
+        border-radius: 10px;
+        margin-bottom: 20px;
+    }
+
+    .property-collapses {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 375px) {
+    .properties {
+        padding: 0 10px;
+    }
+
+    .properties-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .property-details {
+        padding: 0 10px;
+    }
+
+    .property-title {
+        font-size: 18px;
+    }
+
+    .property-location {
+        font-size: 12px;
+    }
+
+    .property-tags, .property-card-tags {
+        gap: 5px;
+        margin-bottom: 10px;
+    }
+
+    .property-tag {
+        padding: 2px 8px;
+        font-size: 10px;
+    }
+
+    .property-rating {
+        margin-top: 0;
+    }
+
+    .star {
+        font-size: 16px;
+        margin-right: 2px;
+    }
+
+    .property-card-rating .star {
+        font-size: 12px;
+        margin-right: 1px;
+    }
+
+    .property-host {
+        position: relative;
+        justify-content: flex-end;
+        margin-top: 15px;
+    }
+
+    .host-name {
+        font-size: 12px;
+    }
+
+    .host-picture, .default-avatar {
+        width: 32px;
+        height: 32px;
+    }
+
+    .property-card-host .host-picture,
+    .property-card-host .default-avatar {
+        width: 20px;
+        height: 20px;
+    }
+
+    .property-card-host .host-name {
+        font-size: 10px;
+    }
+
+    .property-card {
+        border-radius: 5px;
+    }
+
+    .property-card-image {
+        height: 150px;
+    }
+
+    .property-card-content {
+        padding: 10px;
+    }
+
+    .property-card-title {
+        font-size: 14px;
+    }
+
+    .property-cover {
+        height: 180px;
+        margin-bottom: 15px;
+    }
+
+    .property-collapses {
+        gap: 15px;
+        margin-top: 15px;
+    }
+
+    .loader, .error {
+        padding: 30px;
+        font-size: 16px;
+    }
+}
